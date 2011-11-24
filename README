@@ -1,0 +1,5 @@
+INSTALLATION
+
+* git clone https://techsplicer@github.com/techsplicer/dotfiles.git ~/.dotfiles
+* cd ~/.dotfiles
+* ./install.rb
