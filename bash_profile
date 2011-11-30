@@ -2,7 +2,7 @@
 
 umask 002
 #PS1='\[\e[1;32m\]\u [ \[\e[1;33m\]\h\[\e[1;32m\] ][ \[\e[1;33m\]\w\[\e[1;32m\] ]$ \[\e[0m\]'
-source .alias
+source "$HOME/.alias"
 export EDITOR=vi
 
 # Load bashrc
