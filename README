@@ -4,3 +4,6 @@ INSTALLATION
 * cd ~/.dotfiles
 * ./install.rb
 
+NOTES
+
+* Remove or comment out content in .rvmrc if RVM isn't used
