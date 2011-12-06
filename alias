@@ -1,6 +1,8 @@
 # Enable colors for ls, etc.
 eval `dircolors -b ~/.dir_colors`
 
+alias vialias='vi ~/.alias'
+alias sourcea='source ~/.alias; echo "DONE: source ~/.alias"'
 alias bashrc='vi ~/.bashrc'
 alias sourceb='source ~/.bashrc; echo "DONE: source ~/.bashrc"'
 
