@@ -31,6 +31,8 @@ alias glp='git log --pretty=full --stat --author=[NAME]'
 alias gpr='git pull --rebase'
 
 ### Site specific Passenger restarts
+# Rails Sites
+alias restartreg='touch ~/dev.registry.[SERVER].com/registryweb/tmp/restart.txt'
 
 # Shared Recipe
 alias restartsr='touch ~/shared.recipes.[SERVER].com/dev/recipeweb/tmp/restart.txt'
