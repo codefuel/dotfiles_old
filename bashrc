@@ -80,9 +80,9 @@ esac
 #  fi
 
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -116,17 +116,22 @@ export PERL5LIB=$HOME/lib/perl/site_perl:$HOME/lib/perl/site_perl/5.8.4/i686-lin
 #export RAILS_ENVIRONMENT='development'
 
 # Ruby local gems
-export PATH="$HOME/.rvm/gems:$HOME/.gems/bin:$HOME/opt/bin:$PATH"
+#export PATH="$HOME/.rvm/gems:$HOME/.gems/bin:$HOME/opt/bin:$PATH"
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$HOME/local/bin:$PATH"
+eval "$(rbenv init -)"
+export PREFIX=$HOME/local
+export TMPDIR=$HOME/tmp
 
 # Path to local gems
 #export PATH="$HOME/bin:$HOME/.gems/bin:$PATH"
 
+# Restart aliases
+alias restarttq='touch ~/dev.tq.vicxar.com/tq_web/tmp/restart.txt'
+alias restartmusic='touch ~/dev.music.aaronsargent.com/music_web/tmp/restart.txt'
+alias restartt='touch ~/therapy.aaronsargent.com/therapy_web/tmp/restart.txt'
 
-# NOTE:
-# RVM, as of 20111109 Dreamhost passenger uses the system ruby, 1.8.7 and doesn't work using another version of ruby like 1.9.2
-# Also Rails 3.1 require rake 1.3.2, but rake 1.2.1 is used by passenger since this is the system ruby gem that gets loaded
-# before the rails app loads
+# For when running FastCGI
+alias restartt='killall -USR1 dispatch.fcgi'
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
-##[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.

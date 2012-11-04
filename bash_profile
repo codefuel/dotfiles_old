@@ -19,8 +19,5 @@ source "$HOME/.bashrc"
 
 export PERL5LIB=$HOME/lib/perl/site_perl:$HOME/lib/perl/site_perl/5.8.4/i686-linux:$HOME/lib/perl/5.8.4/i686-linux:$HOME/lib/perl:$HOME/lib/perl/5.8.4:$HOME/lib/perl/5.8.4/auto:$HOME/usr/local/bin/perl:$HOME/usr/local/share/perl:$HOME/share/perl/5.8.4:$HOME/vicxar.com/common/lib:$HOME/dev.vicxar.com/common/lib:
 
-# NOTE:
-# RVM, as of 20111109 Dreamhost passenger uses the system ruby, 1.8.7 and doesn't work using another version of ruby like 1.9.2
-# Also Rails 3.1 require rake 1.3.2, but rake 1.2.1 is used by passenger since this is the system ruby gem that gets loaded
-# before the rails app loads
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+export GEM_PATH=''
+export GEM_HOME=''
