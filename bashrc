@@ -130,7 +130,6 @@ export TMPDIR=$HOME/tmp
 # Restart aliases
 alias restarttq='touch ~/dev.tq.vicxar.com/tq_web/tmp/restart.txt'
 alias restartmusic='touch ~/dev.music.aaronsargent.com/music_web/tmp/restart.txt'
-alias restartt='touch ~/therapy.aaronsargent.com/therapy_web/tmp/restart.txt'
 
 # For when running FastCGI
 alias restartt='killall -USR1 dispatch.fcgi'
