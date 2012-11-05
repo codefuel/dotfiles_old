@@ -1,1 +1,1 @@
-/home/vicxar_rails/.dotfiles/vim
+/home/vicxar_projects/.dotfiles/vim
