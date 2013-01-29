@@ -1,0 +1,38 @@
+[user]
+	name = Aaron Sargent
+	email = asargent@marchex.com
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+	ui = true
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = red
+  untracked = cyan
+
+[push]
+	default = current #upstream
+
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	taglist = log --reverse --format=%h%d --tags --no-walk
+	up = pull --rebase
+[core]
+	excludesfile = /home/asargent/.gitignore

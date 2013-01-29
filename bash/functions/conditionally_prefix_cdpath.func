@@ -1,0 +1,6 @@
+function conditionally_prefix_cdpath () {
+  local dir=$1;
+  if [ -d $dir ]; then
+    CDPATH="$dir:${CDPATH}"
+  fi
+}

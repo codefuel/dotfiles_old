@@ -1,0 +1,9 @@
+function ssh_push_cert () {
+  local _host;
+  test -f ~/.ssh/id_rsa.pub || ssh-keygen -t rsa -b 4096
+  for _host in "$@"
+  do
+    echo $_host;
+    ssh $_host 'cat >> ~/.ssh/authorized_keys' < ~/.ssh/id_rsa.pub
+  done
+}

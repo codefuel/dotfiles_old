@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# Keychain setup
+###############################################################################
+if which keychain 1>/dev/null 2>&1; then
+  keychain ~/.ssh/id_rsa
+  source ~/.keychain/${HOSTNAME}-sh > /dev/null
+fi
+
+export PAGER='less'
+export EDITOR='vim'
+
+unset MAILCHECK
