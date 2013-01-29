@@ -1,0 +1,32 @@
+[user]
+	name = Andy Garbutt
+	email = agarbutt@marchex.com
+[alias]
+  co = checkout
+  promote = !${DOTFILES}/bin/git-promote
+  wtf = !${DOTFILES}/bin/git-wtf
+  rank-contributers = !${DOTFILES}/bin/get-rank-contributers
+  count = !git shortlog -sn
+	ci = commit
+	taglist = log --reverse --format=%h%d --tags --no-walk
+	st = status
+	up = pull --rebase
+[apply]
+  whitespace = nowarn
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+	ui = true
+[merge]
+  summary = true
+  tool = vimdiff
+[mergetool]
+  keepBackup = false
+[github]
+  user = techsplicer
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[push]
+	default = upstream

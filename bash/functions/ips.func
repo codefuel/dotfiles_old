@@ -1,0 +1,3 @@
+function ips () {
+  ifconfig | grep "inet " | awk '{ print $2 }'
+}

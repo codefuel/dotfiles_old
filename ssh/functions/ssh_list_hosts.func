@@ -1,0 +1,3 @@
+function ssh_list_hosts() {
+  awk '$1 ~ /Host$/ { print $2 }' ~/.ssh/config
+}

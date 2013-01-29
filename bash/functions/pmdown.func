@@ -1,0 +1,9 @@
+function pmdown () {
+  if command -v markdown &>/dev/null
+  then    
+    markdown $1 | browser
+  else
+    echo "You don't have a markdown command installed!"
+  fi
+}
+

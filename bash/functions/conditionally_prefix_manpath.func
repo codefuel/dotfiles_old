@@ -1,0 +1,6 @@
+function conditionally_prefix_manpath () {
+  local dir=$1;
+  if [ -d $dir ]; then
+    MANPATH="$dir:${MANPATH}"
+  fi
+}

@@ -1,0 +1,3 @@
+function pcurl () {
+  curl "${1}" | open -f -a $PREVIEW
+}

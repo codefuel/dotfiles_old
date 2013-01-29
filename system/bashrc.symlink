@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# shortcut to dotfiles
+export DOTFILES="${HOME}/.dotfiles"
+
+# projects folder that we can `c [tab]` to
+export PROJECTS=/site
+
+
+source "${DOTFILES}/bash/colors.theme"
+source "${DOTFILES}/bash/base.theme"
+
+for config_file in $(find ${DOTFILES} -type f -name *.func)
+do
+  source $config_file
+done
+
+# source our aliases
+for config_file in $(find ${DOTFILES} -type f -name aliases.bash)
+do
+  source $config_file
+done
+
+# source every completion script in our repository
+for config_file in $(find ${DOTFILES} -type f -name completion.sh)
+do
+  source $config_file
+done
+
+# soruce our configurations
+for config_file in $(find ${DOTFILES} -type f -name config.bash)
+do
+  source $config_file
+done
+
+unset config_file
+
+# use a .localrc file for our SUPER SECRECT STUFF
+if [ -a ~/.localrc ]; then source ~/.localrc; fi
+
+if [[ $PROMPT ]]; then
+    export PS1=$PROMPT
+fi

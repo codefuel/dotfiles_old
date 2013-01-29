@@ -1,0 +1,4 @@
+function pman () {
+  group 'base'
+  man -t "${1}" | open -f -a $PREVIEW
+}

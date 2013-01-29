@@ -1,0 +1,7 @@
+function pickfrom () {
+  local file=$1
+  [ -z "$file" ] && reference $FUNCNAME && return
+  length=$(cat $file | wc -l)
+  n=$(expr $RANDOM \* $length \/ 32768 + 1)
+  head -n $n $file | tail -1
+}
