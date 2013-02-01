@@ -1,0 +1,79 @@
+export DEV_ID=20
+export DEV_DB=ODNEXT${DEV_ID}
+
+# Custom Aliases
+alias data='cd ~/test_data'
+
+# Oracle Databases
+alias sql='/site/mysql/mysql-5.1.38/bin/mysql -u root -S /site/next/clp_server_mysql/run/mysql.sock'
+alias ora_dev='cd /home/asargent/;~/build/gqlplus/gqlplus-1.12/Linux/gqlplus asargent@ODNEXT20' # ora6.qa.marchex.com:7352/ODNEXT20
+alias ora_qa='~/build/gqlplus/gqlplus-1.12/Linux/gqlplus asargent@ora8.qa.marchex.com:7353/OQNEXT'
+# QA2: (yml): database: ora8.qa.marchex.com:7353/OQ2NEXT
+alias db='cd /site/dcm/database'
+
+# Jingle MySQL Databases
+alias mercurydb='mysql -h mercury1-qa.som1 -p 3306 -u asargent -p'
+alias jtndb='mysql -h jtndb1-qa.som1 -p 3306 -u asargent -p'
+alias healthdb='mysql -h healthdb1-qa.som1 -p 3306 -u asargent -p'
+alias jatdb='mysql -h jatdb1-qa.som1 -p 3306 -u asargent -p'
+alias jandb='mysql -h jandb1-qa.som1 -u asargent -p'
+alias sun1='mysql -h sun1-qa.som1 -u asargent -p'
+alias adhoc1='mysql-adhoc1-qa.som1 -u asargent -p'
+
+#Health
+#Hostname: healthdb1-qa.som1
+#Port: 3306
+
+#JTN
+#Hostname: jtndb1-qa.som1
+#Port: 3306
+
+#Mercury
+#Hostname: mercury1-qa.som1
+#Port: 3306
+
+# Project aliases
+alias nim='cd /site/nim'
+alias next='cd /site/next'
+alias nextstop='~/util/next_services stop'
+alias nextstart='~/util/next_services start'
+#alias pui='cd /site/next/public_ui'
+alias pui='cd /site/public_ui'
+alias puiconfgen='cd /site/public_ui; confgen --dev;'
+alias muiconfgen='cd /site/mgmt_ui; confgen --dev;'
+alias dcmstop='~/util/dcm_services stop'
+alias dcmstart='~/util/dcm_services start'
+alias dcm='cd /site/dcm'
+
+# mgmt_ui
+alias mui='cd /site/mgmt_ui'
+alias js='cd /site/mgmt_ui/app/assets/javascripts/application'
+alias css='cd /site/mgmt_ui/app/assets/stylesheets/application'
+
+# monitoring
+alias dcmmonitor='cd /site/dcm/monitoring'
+alias dlmmonitor='cd /site/dlm-monitoring'
+
+# Git aliases
+alias gla='git log --author=asargent'
+alias glam='git log --pretty=medium --stat --author=asargent'
+alias gpr='git pull --rebase'
+
+# Test Coverage
+alias coverage='cd /code/coverage/mgmt_ui'
+alias restartcoverage='cd /code/coverage/mgmt_ui; confgen --dev; /code/coverage/mgmt_ui/bin/nginx stop; sleep 1; /code/coverage/mgmt_ui/bin/nginx start; sleep 3; /code/coverage/mgmt_ui/bin/thin stop; sleep 1; /code/coverage/mgmt_ui/bin/thin start;'
+# Web Server
+alias muis='/site/mgmt_ui/bin/nginx start'
+alias muistop='/site/mgmt_ui/bin/nginx stop'
+alias muir='/site/mgmt_ui/bin/nginx restart'
+alias restartmui='cd /site/mgmt_ui/;confgen --dev;/site/mgmt_ui/bin/thin stop; sleep 4; /site/mgmt_ui/bin/thin start;'
+alias restartmuiall='/site/mgmt_ui/confgen --dev;/site/mgmt_ui/bin/nginx stop; sleep 1; /site/mgmt_ui/bin/thin stop; sleep 4; /site/mgmt_ui/bin/thin start; sleep 4; /site/mgmt_ui/bin/nginx start;'
+alias restartpui='/site/public_ui/confgen --dev;/site/public_ui/bin/thin stop; sleep 4; /site/public_ui/bin/thin start;'
+
+# Hack day project April 2012
+alias restartdashall='/site/hackday-0412/dashboard/bin/nginx stop; sleep 1; /site/hackday-0412/dashboard/bin/thin stop; sleep 4; /site/hackday-0412/dashboard/bin/thin start; sleep 4; /site/hackday-0412/dashboard/bin/nginx start;'
+alias restartdash='/site/hackday-0412/dashboard/bin/thin stop; sleep 4; /site/hackday-0412/dashboard/bin/thin start;'
+
+# QA
+alias qa1='ssh dcmui1.qa'
+
