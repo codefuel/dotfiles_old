@@ -1,1 +1,0 @@
-/home/vicxar_projects/.dotfiles/vim
