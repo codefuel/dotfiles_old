@@ -1,6 +1,6 @@
 [user]
-	name = Aaron Sargent
-	email = asargent@marchex.com
+	name = codefuel
+	email = codefule@vicxar.com
 
 [color]
   branch = auto
@@ -35,4 +35,4 @@
 	taglist = log --reverse --format=%h%d --tags --no-walk
 	up = pull --rebase
 [core]
-	excludesfile = /home/asargent/.gitignore
+	excludesfile = $HOME/.gitignore
